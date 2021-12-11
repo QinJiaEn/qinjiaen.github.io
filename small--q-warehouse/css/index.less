@@ -1,0 +1,118 @@
+
+body{
+    max-width: 960px;
+    margin: 0 auto;
+    font: normal 14px/1.5 Tahoma,"Lucida Grande",Verdana,"Microsoft YaHei UI",STXihei,hei;
+    color: #000;
+    background-color: pink;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+div{
+    box-sizing: border-box;
+}
+header h5{
+    margin: 0.7rem 0;
+    font-size: 20px;
+    text-align: center;
+    color: #000;
+}
+/* 钢琴背景 */
+
+.piano-bg{
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 320px;
+    background: url(../images/3D2-key_board.png) no-repeat center;
+    background-size: 100% 320px;
+    background-color: skyblue;
+    .element{
+        // display: none;
+        flex:1;
+        // height: 100%;
+        // background: url(../images/white_l.png) no-repeat center;
+        background-size: 100% 100% !important;
+    }
+    .b-ele{
+        position: absolute;
+        height: 185px;
+        // background: url(../images/black.png) no-repeat center;
+        background-size: 100% 185px !important;
+    }
+    .black-key{
+        position: relative;
+        @media screen and (max-width:960px) {
+            .b-ele{
+                width: 7.7vw;
+            }
+            & .b-ele:nth-child(1) {
+                top: 0.2vh;
+                left: -91.5vw;
+            }
+            & .b-ele:nth-child(2) {
+                top: 0.2vh;
+                left: -79vw;
+            }
+            & .b-ele:nth-child(3) {
+                top: 0.2vh;
+                left: -53.9vw;
+            }
+            & .b-ele:nth-child(4) {
+                top: 0.2vh;
+                left: -41vw;
+            }
+            & .b-ele:nth-child(5) {
+                top: 0.2vh;
+                left: -29vw;
+            }
+            & .b-ele:nth-child(6) {
+                top: 0.2vh;
+                left: -4vw;
+            }
+        };
+        @media screen and (min-width:961px) {
+            .b-ele{
+                width: 75px;
+            }
+            & .b-ele:nth-child(1) {
+                top: 0;
+                left: -878px;
+            }
+            & .b-ele:nth-child(2) {
+                top: 0;
+                left: -757px;
+            }
+            & .b-ele:nth-child(3) {
+                top: 0;
+                left: -517px;
+            }
+            & .b-ele:nth-child(4) {
+                top: 0;
+                left: -397px;
+            }
+            & .b-ele:nth-child(5) {
+                top: 0;
+                left: -277px;
+            }
+            & .b-ele:nth-child(6) {
+                top: 0;
+                left: -39px;
+            }
+        }
+       
+       
+    }
+}
+
+
