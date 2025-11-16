@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Mr.Q</title>
+  <icon>https://qinjiaen.github.io/icon.png</icon>
+  <subtitle>喜欢瞎搞的大学生+1</subtitle>
+  <link href="https://qinjiaen.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://qinjiaen.github.io/"/>
+  <updated>2025-11-16T16:53:56.371Z</updated>
+  <id>https://qinjiaen.github.io/</id>
+  
+  <author>
+    <name>Mr.Q</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>换新笔记本了需要下载的软件</title>
+    <link href="https://qinjiaen.github.io/posts/345213/"/>
+    <id>https://qinjiaen.github.io/posts/345213/</id>
+    <published>2025-03-12T01:24:33.000Z</published>
+    <updated>2025-11-16T16:53:56.371Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;便捷软件&quot;&gt;&lt;a href=&quot;#便捷软件&quot; class=&quot;headerlink&quot; title=&quot;便捷软件&quot;&gt;&lt;/a&gt;便捷软件&lt;/h2&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    
+    <category term="下载" scheme="https://qinjiaen.github.io/tags/%E4%B8%8B%E8%BD%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BigeMap 获取行政区域</title>
+    <link href="https://qinjiaen.github.io/posts/e627e35/"/>
+    <id>https://qinjiaen.github.io/posts/e627e35/</id>
+    <published>2023-09-07T04:01:44.000Z</published>
+    <updated>2025-11-16T16:53:56.268Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;如何在BigeMap中获取行政区域的json方法&quot;&gt;&lt;a href=&quot;#如何在BigeMap中获取行政区域的json方法&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>八股文-多线程篇</title>
+    <link href="https://qinjiaen.github.io/posts/51401971/"/>
+    <id>https://qinjiaen.github.io/posts/51401971/</id>
+    <published>2023-07-29T08:49:10.000Z</published>
+    <updated>2025-11-16T16:53:55.842Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;多线程篇&quot;&gt;&lt;a href=&quot;#多线程篇&quot; class=&quot;headerlink&quot; title=&quot;多线程篇&quot;&gt;&lt;/a&gt;多线程篇&lt;/h1&gt;&lt;h2 id=&quot;线程的基础知识&quot;&gt;&lt;a href=&quot;#线程的基础知识&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>八股文-集合篇</title>
+    <link href="https://qinjiaen.github.io/posts/724f0833/"/>
+    <id>https://qinjiaen.github.io/posts/724f0833/</id>
+    <published>2023-07-28T10:01:25.000Z</published>
+    <updated>2025-11-16T16:53:56.184Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;集合篇&quot;&gt;&lt;a href=&quot;#集合篇&quot; class=&quot;headerlink&quot; title=&quot;集合篇&quot;&gt;&lt;/a&gt;集合篇&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;/posts/724f0833/image-20230728194105302.png&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>八股文-Redis篇</title>
+    <link href="https://qinjiaen.github.io/posts/5d16a534/"/>
+    <id>https://qinjiaen.github.io/posts/5d16a534/</id>
+    <published>2023-07-27T10:08:42.000Z</published>
+    <updated>2025-11-16T16:53:55.508Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Redis-篇&quot;&gt;&lt;a href=&quot;#Redis-篇&quot; class=&quot;headerlink&quot; title=&quot;Redis 篇&quot;&gt;&lt;/a&gt;Redis 篇&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>八股文-微服务篇</title>
+    <link href="https://qinjiaen.github.io/posts/52d9fea0/"/>
+    <id>https://qinjiaen.github.io/posts/52d9fea0/</id>
+    <published>2023-07-27T10:04:20.000Z</published>
+    <updated>2025-11-16T16:53:55.886Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;微服务篇&quot;&gt;&lt;a href=&quot;#微服务篇&quot; class=&quot;headerlink&quot; title=&quot;微服务篇&quot;&gt;&lt;/a&gt;微服务篇&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/posts/52d9fea0/image-20230727182142156.png&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>八股文-框架篇</title>
+    <link href="https://qinjiaen.github.io/posts/90abcb0a/"/>
+    <id>https://qinjiaen.github.io/posts/90abcb0a/</id>
+    <published>2023-07-24T09:43:38.000Z</published>
+    <updated>2025-11-16T16:53:55.955Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;框架篇&quot;&gt;&lt;a href=&quot;#框架篇&quot; class=&quot;headerlink&quot; title=&quot;框架篇&quot;&gt;&lt;/a&gt;框架篇&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/posts/90abcb0a/image-20230724174617036.png&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>八股文(MySQL篇)</title>
+    <link href="https://qinjiaen.github.io/posts/a981c63a/"/>
+    <id>https://qinjiaen.github.io/posts/a981c63a/</id>
+    <published>2023-07-22T03:29:44.000Z</published>
+    <updated>2025-11-16T16:53:55.316Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;MySQL篇&quot;&gt;&lt;a href=&quot;#MySQL篇&quot; class=&quot;headerlink&quot; title=&quot;MySQL篇&quot;&gt;&lt;/a&gt;MySQL篇&lt;/h1&gt;&lt;h2 id=&quot;概览&quot;&gt;&lt;a href=&quot;#概览&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>微服务实战</title>
+    <link href="https://qinjiaen.github.io/posts/a219ce80/"/>
+    <id>https://qinjiaen.github.io/posts/a219ce80/</id>
+    <published>2023-07-10T00:27:03.000Z</published>
+    <updated>2025-11-16T16:53:56.230Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;实战内容&quot;&gt;&lt;a href=&quot;#实战内容&quot; class=&quot;headerlink&quot; title=&quot;实战内容&quot;&gt;&lt;/a&gt;实战内容&lt;/h1&gt;&lt;h2 id=&quot;1-搭建环境&quot;&gt;&lt;a href=&quot;#1-搭建环境&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="微服务实战" scheme="https://qinjiaen.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%AE%9E%E6%88%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AOP笔记</title>
+    <link href="https://qinjiaen.github.io/posts/fd57f765/"/>
+    <id>https://qinjiaen.github.io/posts/fd57f765/</id>
+    <published>2023-06-24T10:02:34.000Z</published>
+    <updated>2025-11-16T16:53:55.057Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;事务管理-amp-AOP笔记&quot;&gt;&lt;a href=&quot;#事务管理-amp-AOP笔记&quot; class=&quot;headerlink&quot; title=&quot;事务管理&amp;amp;AOP笔记&quot;&gt;&lt;/a&gt;事务管理&amp;amp;AOP笔记&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+    <category term="记录、笔记" scheme="https://qinjiaen.github.io/tags/%E8%AE%B0%E5%BD%95%E3%80%81%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot注解总结</title>
+    <link href="https://qinjiaen.github.io/posts/2d62ae04/"/>
+    <id>https://qinjiaen.github.io/posts/2d62ae04/</id>
+    <published>2023-06-12T08:05:20.000Z</published>
+    <updated>2025-11-16T16:53:55.068Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;注解总结&quot;&gt;&lt;a href=&quot;#注解总结&quot; class=&quot;headerlink&quot; title=&quot;注解总结&quot;&gt;&lt;/a&gt;注解总结&lt;/h1&gt;&lt;h2 id=&quot;1-把对象放到Spring容器中&quot;&gt;&lt;a href=&quot;#1-把对象放到Spring容器中&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="注解" scheme="https://qinjiaen.github.io/tags/%E6%B3%A8%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis数据库</title>
+    <link href="https://qinjiaen.github.io/posts/eb52a7b2/"/>
+    <id>https://qinjiaen.github.io/posts/eb52a7b2/</id>
+    <published>2023-06-03T10:02:11.000Z</published>
+    <updated>2025-11-16T16:53:55.061Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Redis常用指令&quot;&gt;&lt;a href=&quot;#Redis常用指令&quot; class=&quot;headerlink&quot; title=&quot;Redis常用指令&quot;&gt;&lt;/a&gt;Redis常用指令&lt;/h2&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+    <category term="redis" scheme="https://qinjiaen.github.io/tags/redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring面试题</title>
+    <link href="https://qinjiaen.github.io/posts/489ef953/"/>
+    <id>https://qinjiaen.github.io/posts/489ef953/</id>
+    <published>2023-05-26T10:11:06.000Z</published>
+    <updated>2025-11-16T16:53:55.076Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;面试题1：如果别人给我了一个项目，都已经打成jar包了（没有提供源码），发现其中的一项参数不对，能不能在外部直接修改项目配置项的内容，如何实现？&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="面试题" scheme="https://qinjiaen.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaSE阶段笔记</title>
+    <link href="https://qinjiaen.github.io/posts/737a1d7/"/>
+    <id>https://qinjiaen.github.io/posts/737a1d7/</id>
+    <published>2023-05-22T14:33:16.000Z</published>
+    <updated>2025-11-16T16:53:55.132Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;面向对象编程&quot;&gt;&lt;a href=&quot;#面向对象编程&quot; class=&quot;headerlink&quot; title=&quot;面向对象编程&quot;&gt;&lt;/a&gt;面向对象编程&lt;/h1&gt;&lt;h2 id=&quot;定义类的补充注意事项&quot;&gt;&lt;a href=&quot;#定义类的补充注意事项&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="小结、复习" scheme="https://qinjiaen.github.io/tags/%E5%B0%8F%E7%BB%93%E3%80%81%E5%A4%8D%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Web阶段注解分析</title>
+    <link href="https://qinjiaen.github.io/posts/a85d6283/"/>
+    <id>https://qinjiaen.github.io/posts/a85d6283/</id>
+    <published>2023-05-16T08:57:21.000Z</published>
+    <updated>2025-11-16T16:53:55.097Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;RequestParam-PathVariable和-RequestBody三者区别&quot;&gt;&lt;a href=&quot;#RequestParam-PathVariable和-RequestBody三者区别&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="注解" scheme="https://qinjiaen.github.io/tags/%E6%B3%A8%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一个关于hexo提供下载的尝试</title>
+    <link href="https://qinjiaen.github.io/posts/345212/"/>
+    <id>https://qinjiaen.github.io/posts/345212/</id>
+    <published>2023-05-16T01:24:33.000Z</published>
+    <updated>2025-11-16T16:53:55.271Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;开始动手&quot;&gt;&lt;a href=&quot;#开始动手&quot; class=&quot;headerlink&quot; title=&quot;开始动手&quot;&gt;&lt;/a&gt;开始动手&lt;/h2&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    
+    <category term="尝试" scheme="https://qinjiaen.github.io/tags/%E5%B0%9D%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>web总结</title>
+    <link href="https://qinjiaen.github.io/posts/8ffbbb9f/"/>
+    <id>https://qinjiaen.github.io/posts/8ffbbb9f/</id>
+    <published>2023-05-12T08:32:18.000Z</published>
+    <updated>2025-11-16T16:53:55.261Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Day01-HTML-amp-CSS-amp-JS&quot;&gt;&lt;a href=&quot;#Day01-HTML-amp-CSS-amp-JS&quot; class=&quot;headerlink&quot; title=&quot;Day01 - HTML&amp;amp;CSS&amp;amp;JS&quot;&gt;&lt;/a&gt;Day01 -</summary>
+        
+      
+    
+    
+    
+    
+    <category term="web" scheme="https://qinjiaen.github.io/tags/web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试题库</title>
+    <link href="https://qinjiaen.github.io/posts/c5e9cf91/"/>
+    <id>https://qinjiaen.github.io/posts/c5e9cf91/</id>
+    <published>2023-05-12T01:04:44.000Z</published>
+    <updated>2025-11-16T16:53:56.373Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;面试题小结&quot;&gt;&lt;a href=&quot;#面试题小结&quot; class=&quot;headerlink&quot; title=&quot;面试题小结&quot;&gt;&lt;/a&gt;面试题小结&lt;/h1&gt;&lt;h1 id=&quot;1-内存结构&quot;&gt;&lt;a href=&quot;#1-内存结构&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
