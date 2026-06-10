@@ -1,0 +1,208 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>八股文-框架篇 | Mr.Q</title><meta name="keywords" content="笔记,博客"><meta name="author" content="Mr.Q"><meta name="copyright" content="Mr.Q"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="框架篇 SpringSpring框架中的单例Bean是线程安全的吗？ 12不是线程安全的Spring框架中有一个 @Scope 注解，默认的值就是 singleton 单例的，因为一般在 Spring 的 bean 中都是注入无状态的对象，没有线程安全问题，如果在 bean 中定义了可修改的成员变量，是要考虑线程安全问题的，可以使用多例或者加锁来解决  e.g AOP  Spring中的事务如何实">
+<meta property="og:type" content="article">
+<meta property="og:title" content="八股文-框架篇">
+<meta property="og:url" content="https://qinjiaen.github.io/posts/90abcb0a/index.html">
+<meta property="og:site_name" content="Mr.Q">
+<meta property="og:description" content="框架篇 SpringSpring框架中的单例Bean是线程安全的吗？ 12不是线程安全的Spring框架中有一个 @Scope 注解，默认的值就是 singleton 单例的，因为一般在 Spring 的 bean 中都是注入无状态的对象，没有线程安全问题，如果在 bean 中定义了可修改的成员变量，是要考虑线程安全问题的，可以使用多例或者加锁来解决  e.g AOP  Spring中的事务如何实">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://qinjiaen.github.io/posts/90abcb0a/1.png">
+<meta property="article:published_time" content="2023-07-24T09:43:38.000Z">
+<meta property="article:modified_time" content="2025-11-16T16:42:05.000Z">
+<meta property="article:author" content="Mr.Q">
+<meta property="article:tag" content="笔记,博客">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://qinjiaen.github.io/posts/90abcb0a/1.png"><link rel="shortcut icon" href="/images/favicon.ico"><link rel="canonical" href="https://qinjiaen.github.io/posts/90abcb0a/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//www.clarity.ms"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?1eef215a82c1ac65643b2f28468a92ab";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NDJCWM8G60"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NDJCWM8G60');
+</script><script>(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "ab6du0wgum");</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: [object Object]
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '八股文-框架篇',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-11-17 00:42:05'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Mr.Q" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/1.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/posts/90abcb0a/1.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Mr.Q</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">八股文-框架篇</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-24T09:43:38.000Z" title="发表于 2023-07-24 17:43:38">2023-07-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-11-16T16:42:05.000Z" title="更新于 2025-11-17 00:42:05">2025-11-17</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="八股文-框架篇"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="框架篇"><a href="#框架篇" class="headerlink" title="框架篇"></a>框架篇</h1><p><img src="/posts/90abcb0a/image-20230724174617036.png" alt="image-20230724174617036"></p>
+<h2 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h2><h3 id="Spring框架中的单例Bean是线程安全的吗？"><a href="#Spring框架中的单例Bean是线程安全的吗？" class="headerlink" title="Spring框架中的单例Bean是线程安全的吗？"></a>Spring框架中的单例Bean是线程安全的吗？</h3><p><img src="/posts/90abcb0a/image-20230724175230927.png" alt="image-20230724175230927"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">不是线程安全的</span><br><span class="line">Spring框架中有一个 @Scope 注解，默认的值就是 singleton 单例的，因为一般在 Spring 的 bean 中都是注入无状态的对象，没有线程安全问题，如果在 bean 中定义了可修改的成员变量，是要考虑线程安全问题的，可以使用多例或者加锁来解决</span><br></pre></td></tr></table></figure>
+
+<h4 id="e-g"><a href="#e-g" class="headerlink" title="e.g"></a>e.g</h4><p><img src="/posts/90abcb0a/image-20230724175410989.png" alt="image-20230724175410989"></p>
+<h3 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h3><p><img src="/posts/90abcb0a/image-20230724175759872.png" alt="image-20230724175759872"></p>
+<p><img src="/posts/90abcb0a/image-20230724180948505.png" alt="image-20230724180948505"></p>
+<h3 id="Spring中的事务如何实现"><a href="#Spring中的事务如何实现" class="headerlink" title="Spring中的事务如何实现"></a>Spring中的事务如何实现</h3><p><img src="/posts/90abcb0a/image-20230724180552118.png" alt="image-20230724180552118"></p>
+<h3 id="Spring中事务失效场景"><a href="#Spring中事务失效场景" class="headerlink" title="Spring中事务失效场景"></a>Spring中事务失效场景</h3><p><strong>异常捕获处理</strong></p>
+<p><img src="/posts/90abcb0a/image-20230724182222137.png" alt="image-20230724182222137"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">原因：</span><br><span class="line">	自己手动处理了异常try掉了，没有抛出异常</span><br><span class="line">解决：</span><br><span class="line">	手动抛出异常</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>抛出检查异常</strong></p>
+<p><img src="/posts/90abcb0a/image-20230724182512757.png" alt="image-20230724182512757"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">原因：</span><br><span class="line">	Spring默认只会回滚非检查异常</span><br><span class="line">解决:</span><br><span class="line">	配置rollbackFor属性</span><br><span class="line">	<span class="meta">@Transaction(rollbackFor = Exception.class)</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>非public方法</strong></p>
+<p><img src="/posts/90abcb0a/image-20230724194544508.png" alt="image-20230724194544508"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">原因：</span><br><span class="line">	Spring 为方法创建代理，添加事务通知，前提条件都是该方法是public的</span><br><span class="line">	</span><br><span class="line">解决：</span><br><span class="line">	改为public   不写默认是defult</span><br></pre></td></tr></table></figure>
+
+<h3 id="Spring-中-Bean-的生命周期"><a href="#Spring-中-Bean-的生命周期" class="headerlink" title="Spring 中 Bean 的生命周期"></a>Spring 中 Bean 的生命周期</h3><p><img src="/posts/90abcb0a/image-20230724203138282.png" alt="image-20230724203138282"></p>
+<p><img src="/posts/90abcb0a/image-20230724204637165.png" alt="image-20230724204637165"></p>
+<h3 id="Spring-的循环引用"><a href="#Spring-的循环引用" class="headerlink" title="Spring 的循环引用"></a>Spring 的循环引用</h3><p><img src="/posts/90abcb0a/image-20230724210930952.png" alt="image-20230724210930952"></p>
+<h4 id="三级缓存解决循环依赖"><a href="#三级缓存解决循环依赖" class="headerlink" title="三级缓存解决循环依赖"></a>三级缓存解决循环依赖</h4><p><img src="/posts/90abcb0a/image-20230724211242950.png" alt="image-20230724211242950"></p>
+<p><img src="/posts/90abcb0a/image-20230724212156129.png" alt="image-20230724212156129"></p>
+<p><strong>用一级缓存和二级缓存解决</strong></p>
+<p><img src="/posts/90abcb0a/image-20230724211516842.png" alt="image-20230724211516842"></p>
+<h4 id="构造方法出现循环依赖"><a href="#构造方法出现循环依赖" class="headerlink" title="构造方法出现循环依赖"></a>构造方法出现循环依赖</h4><p><img src="/posts/90abcb0a/image-20230724212300102.png" alt="image-20230724212300102"></p>
+<h3 id="Spring-MVC-的执行流程"><a href="#Spring-MVC-的执行流程" class="headerlink" title="Spring MVC 的执行流程"></a>Spring MVC 的执行流程</h3><h4 id="视图阶段-JSP"><a href="#视图阶段-JSP" class="headerlink" title="视图阶段(JSP)"></a>视图阶段(JSP)</h4><p><img src="/posts/90abcb0a/image-20230727110216531.png" alt="image-20230727110216531"></p>
+<h4 id="前后端分离阶段（接口开发，异步请求）"><a href="#前后端分离阶段（接口开发，异步请求）" class="headerlink" title="前后端分离阶段（接口开发，异步请求）"></a>前后端分离阶段（接口开发，异步请求）</h4><p><img src="/posts/90abcb0a/image-20230727110548350.png" alt="image-20230727110548350"></p>
+<p><img src="/posts/90abcb0a/image-20230727111652765.png" alt="image-20230727111652765"></p>
+<h3 id="Spring-Boot-自动配置原理"><a href="#Spring-Boot-自动配置原理" class="headerlink" title="Spring Boot 自动配置原理"></a>Spring Boot 自动配置原理</h3><p><img src="/posts/90abcb0a/image-20230727113821618.png" alt="image-20230727113821618"></p>
+<p><img src="/posts/90abcb0a/image-20230727114228908.png" alt="image-20230727114228908"></p>
+<h3 id="常见注解"><a href="#常见注解" class="headerlink" title="常见注解"></a>常见注解</h3><h4 id="Spring中常见注解"><a href="#Spring中常见注解" class="headerlink" title="Spring中常见注解"></a>Spring中常见注解</h4><p><img src="/posts/90abcb0a/image-20230727114334823.png" alt="image-20230727114334823"></p>
+<h4 id="SpringMVC-常见注解"><a href="#SpringMVC-常见注解" class="headerlink" title="SpringMVC 常见注解"></a>SpringMVC 常见注解</h4><p><img src="/posts/90abcb0a/image-20230727114511263.png" alt="image-20230727114511263"></p>
+<h4 id="SpringBoot-常见注解"><a href="#SpringBoot-常见注解" class="headerlink" title="SpringBoot 常见注解"></a>SpringBoot 常见注解</h4><p><img src="/posts/90abcb0a/image-20230727114649280.png" alt="image-20230727114649280"></p>
+<h2 id="Mybatis"><a href="#Mybatis" class="headerlink" title="Mybatis"></a>Mybatis</h2><h3 id="Mybatis的执行流程"><a href="#Mybatis的执行流程" class="headerlink" title="Mybatis的执行流程"></a>Mybatis的执行流程</h3><p><img src="/posts/90abcb0a/image-20230727115716199.png" alt="image-20230727115716199"></p>
+<p><img src="/posts/90abcb0a/image-20230727115821892.png" alt="image-20230727115821892"></p>
+<h3 id="Mybatis延迟加载"><a href="#Mybatis延迟加载" class="headerlink" title="Mybatis延迟加载"></a>Mybatis延迟加载</h3><p><img src="/posts/90abcb0a/image-20230727121957399.png" alt="image-20230727121957399"></p>
+<p><img src="/posts/90abcb0a/image-20230727122106946.png" alt="image-20230727122106946"></p>
+<h3 id="Mybatis的一级缓存和二级缓存"><a href="#Mybatis的一级缓存和二级缓存" class="headerlink" title="Mybatis的一级缓存和二级缓存"></a>Mybatis的一级缓存和二级缓存</h3><h4 id="一级缓存"><a href="#一级缓存" class="headerlink" title="一级缓存"></a>一级缓存</h4><p><img src="/posts/90abcb0a/image-20230727122434434.png" alt="image-20230727122434434"></p>
+<h4 id="二级缓存"><a href="#二级缓存" class="headerlink" title="二级缓存"></a>二级缓存</h4><p><img src="/posts/90abcb0a/image-20230727171428335.png" alt="image-20230727171428335"></p>
+<p><img src="/posts/90abcb0a/image-20230727172538700.png" alt="image-20230727172538700"></p>
+<p><img src="/posts/90abcb0a/image-20230727172642563.png" alt="image-20230727172642563"></p>
+</article><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/52d9fea0/"><img class="prev-cover" src="/posts/52d9fea0/1.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">八股文-微服务篇</div></div></a></div><div class="next-post pull-right"><a href="/posts/a981c63a/"><img class="next-cover" src="/posts/a981c63a/1.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">八股文(MySQL篇)</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">g</span><span class="switch-btn"></span><span class="second-comment">i</span></div></div><div class="comment-wrap"><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/1.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Mr.Q</div><div class="author-info__description">自学的笔记</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/qinjiaen" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">喜欢瞎搞的大学生。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A1%86%E6%9E%B6%E7%AF%87"><span class="toc-number">1.</span> <span class="toc-text">框架篇</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring"><span class="toc-number">1.1.</span> <span class="toc-text">Spring</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring%E6%A1%86%E6%9E%B6%E4%B8%AD%E7%9A%84%E5%8D%95%E4%BE%8BBean%E6%98%AF%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E5%90%97%EF%BC%9F"><span class="toc-number">1.1.1.</span> <span class="toc-text">Spring框架中的单例Bean是线程安全的吗？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#e-g"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">e.g</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AOP"><span class="toc-number">1.1.2.</span> <span class="toc-text">AOP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring%E4%B8%AD%E7%9A%84%E4%BA%8B%E5%8A%A1%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.1.3.</span> <span class="toc-text">Spring中的事务如何实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring%E4%B8%AD%E4%BA%8B%E5%8A%A1%E5%A4%B1%E6%95%88%E5%9C%BA%E6%99%AF"><span class="toc-number">1.1.4.</span> <span class="toc-text">Spring中事务失效场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-%E4%B8%AD-Bean-%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-number">1.1.5.</span> <span class="toc-text">Spring 中 Bean 的生命周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-%E7%9A%84%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8"><span class="toc-number">1.1.6.</span> <span class="toc-text">Spring 的循环引用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E7%BA%A7%E7%BC%93%E5%AD%98%E8%A7%A3%E5%86%B3%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96"><span class="toc-number">1.1.6.1.</span> <span class="toc-text">三级缓存解决循环依赖</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E5%87%BA%E7%8E%B0%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96"><span class="toc-number">1.1.6.2.</span> <span class="toc-text">构造方法出现循环依赖</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-MVC-%E7%9A%84%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B"><span class="toc-number">1.1.7.</span> <span class="toc-text">Spring MVC 的执行流程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%86%E5%9B%BE%E9%98%B6%E6%AE%B5-JSP"><span class="toc-number">1.1.7.1.</span> <span class="toc-text">视图阶段(JSP)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E9%98%B6%E6%AE%B5%EF%BC%88%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91%EF%BC%8C%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%EF%BC%89"><span class="toc-number">1.1.7.2.</span> <span class="toc-text">前后端分离阶段（接口开发，异步请求）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Boot-%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86"><span class="toc-number">1.1.8.</span> <span class="toc-text">Spring Boot 自动配置原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E6%B3%A8%E8%A7%A3"><span class="toc-number">1.1.9.</span> <span class="toc-text">常见注解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Spring%E4%B8%AD%E5%B8%B8%E8%A7%81%E6%B3%A8%E8%A7%A3"><span class="toc-number">1.1.9.1.</span> <span class="toc-text">Spring中常见注解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SpringMVC-%E5%B8%B8%E8%A7%81%E6%B3%A8%E8%A7%A3"><span class="toc-number">1.1.9.2.</span> <span class="toc-text">SpringMVC 常见注解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SpringBoot-%E5%B8%B8%E8%A7%81%E6%B3%A8%E8%A7%A3"><span class="toc-number">1.1.9.3.</span> <span class="toc-text">SpringBoot 常见注解</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mybatis"><span class="toc-number">1.2.</span> <span class="toc-text">Mybatis</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mybatis%E7%9A%84%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B"><span class="toc-number">1.2.1.</span> <span class="toc-text">Mybatis的执行流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mybatis%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD"><span class="toc-number">1.2.2.</span> <span class="toc-text">Mybatis延迟加载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mybatis%E7%9A%84%E4%B8%80%E7%BA%A7%E7%BC%93%E5%AD%98%E5%92%8C%E4%BA%8C%E7%BA%A7%E7%BC%93%E5%AD%98"><span class="toc-number">1.2.3.</span> <span class="toc-text">Mybatis的一级缓存和二级缓存</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E7%BA%A7%E7%BC%93%E5%AD%98"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">一级缓存</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E7%BA%A7%E7%BC%93%E5%AD%98"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">二级缓存</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/9770d093/" title="Kafka初探"><img src="/posts/e627e35/1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Kafka初探"/></a><div class="content"><a class="title" href="/posts/9770d093/" title="Kafka初探">Kafka初探</a><time datetime="2025-11-18T06:31:22.000Z" title="发表于 2025-11-18 14:31:22">2025-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/345213/" title="换新笔记本了需要下载的软件"><img src="/posts/345212/4.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="换新笔记本了需要下载的软件"/></a><div class="content"><a class="title" href="/posts/345213/" title="换新笔记本了需要下载的软件">换新笔记本了需要下载的软件</a><time datetime="2025-03-12T01:24:33.000Z" title="发表于 2025-03-12 09:24:33">2025-03-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/e627e35/" title="BigeMap 获取行政区域"><img src="/posts/e627e35/1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="BigeMap 获取行政区域"/></a><div class="content"><a class="title" href="/posts/e627e35/" title="BigeMap 获取行政区域">BigeMap 获取行政区域</a><time datetime="2023-09-07T04:01:44.000Z" title="发表于 2023-09-07 12:01:44">2023-09-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/51401971/" title="八股文-多线程篇"><img src="/posts/51401971/1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="八股文-多线程篇"/></a><div class="content"><a class="title" href="/posts/51401971/" title="八股文-多线程篇">八股文-多线程篇</a><time datetime="2023-07-29T08:49:10.000Z" title="发表于 2023-07-29 16:49:10">2023-07-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/724f0833/" title="八股文-集合篇"><img src="/posts/724f0833/1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="八股文-集合篇"/></a><div class="content"><a class="title" href="/posts/724f0833/" title="八股文-集合篇">八股文-集合篇</a><time datetime="2023-07-28T10:01:25.000Z" title="发表于 2023-07-28 18:01:25">2023-07-28</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="60198" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
