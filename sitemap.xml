@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://qinjiaen.github.io/posts/93136ca0/</loc>
+    
+    <lastmod>2026-06-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://qinjiaen.github.io/posts/9770d093/</loc>
     
     <lastmod>2026-06-10</lastmod>
@@ -442,10 +451,24 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://qinjiaen.github.io/tags/frp-nginx/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
     <loc>https://qinjiaen.github.io/categories/%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinjiaen.github.io/categories/%E5%85%A5%E8%81%8C%E5%90%8E-%E6%95%B0%E6%8D%AE%E8%84%B1%E6%95%8F%E5%A4%84%E7%90%86/</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

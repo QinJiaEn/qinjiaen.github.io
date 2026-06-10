@@ -6,7 +6,7 @@
   <link href="https://qinjiaen.github.io/atom.xml" rel="self"/>
   
   <link href="https://qinjiaen.github.io/"/>
-  <updated>2026-06-10T01:58:46.674Z</updated>
+  <updated>2026-06-10T07:27:09.881Z</updated>
   <id>https://qinjiaen.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>nginx与frp的内网服务器实战</title>
+    <link href="https://qinjiaen.github.io/posts/93136ca0/"/>
+    <id>https://qinjiaen.github.io/posts/93136ca0/</id>
+    <published>2025-12-25T04:00:00.000Z</published>
+    <updated>2026-06-10T07:27:09.881Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;xxxx-脱敏处理-管理服务平台-Nginx-与-FRP-穿透配置调整文档&quot;&gt;&lt;a href=&quot;#xxxx-脱敏处理-管理服务平台-Nginx-与-FRP-穿透配置调整文档&quot; class=&quot;headerlink&quot; title=&quot;xxxx(脱敏处理)管理服务平台</summary>
+        
+      
+    
+    
+    
+    <category term="入职后(数据脱敏处理)" scheme="https://qinjiaen.github.io/categories/%E5%85%A5%E8%81%8C%E5%90%8E-%E6%95%B0%E6%8D%AE%E8%84%B1%E6%95%8F%E5%A4%84%E7%90%86/"/>
+    
+    
+    <category term="frp, nginx" scheme="https://qinjiaen.github.io/tags/frp-nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>Kafka初探</title>
