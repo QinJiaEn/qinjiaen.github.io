@@ -6,8 +6,8 @@
 <meta property="og:description" content="面试题小结1 内存结构 1、简述一下JVM的内存结构？(高频) JVM在执行Java程序时，会把它管理的内存划分为若干个的区域，每个区域都有自己的用途和创建销毁时间。如下图所示，可以分为两大部分，线程私有 区和共享区。        线程私有区： ① 程序计数器  作用：是一块较小的内存空间，可以理解为是当前线程所执行程序的字节码文件的行号指示器，存储的是当前线程所执行的行号 特点：线程私有 ，唯">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://qinjiaen.github.io/posts/c5e9cf91/22.jpg">
-<meta property="article:published_time" content="2023-05-12T01:04:44.000Z">
-<meta property="article:modified_time" content="2026-06-10T10:32:43.715Z">
+<meta property="article:published_time" content="2022-05-12T01:04:44.000Z">
+<meta property="article:modified_time" content="2026-07-01T10:05:41.305Z">
 <meta property="article:author" content="Mr.Q">
 <meta property="article:tag" content="笔记,博客">
 <meta name="twitter:card" content="summary">
@@ -66,14 +66,14 @@ gtag('config', 'G-NDJCWM8G60');
   },
   isPhotoFigcaption: false,
   islazyload: false,
-  isanchor: [object Object]
+  isanchor: false
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
   title: '面试题库',
   isPost: true,
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2026-06-10 18:32:43'
+  postUpdate: '2026-07-01 18:05:41'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -145,8 +145,8 @@ gtag('config', 'G-NDJCWM8G60');
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Mr.Q" type="application/atom+xml">
-</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/1.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/posts/c5e9cf91/22.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Mr.Q</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">面试题库</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-05-12T01:04:44.000Z" title="发表于 2023-05-12 09:04:44">2023-05-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-06-10T10:32:43.715Z" title="更新于 2026-06-10 18:32:43">2026-06-10</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="面试题库"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="面试题小结"><a href="#面试题小结" class="headerlink" title="面试题小结"></a>面试题小结</h1><h1 id="1-内存结构"><a href="#1-内存结构" class="headerlink" title="1 内存结构"></a>1 内存结构</h1><blockquote>
+    })(window)</script><link rel="stylesheet" href="https://npm.elemecdn.com/aplayer/dist/APlayer.min.css"><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Mr.Q" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/1.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/posts/c5e9cf91/22.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Mr.Q</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">面试题库</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-05-12T01:04:44.000Z" title="发表于 2022-05-12 09:04:44">2022-05-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-01T10:05:41.305Z" title="更新于 2026-07-01 18:05:41">2026-07-01</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="面试题库"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="面试题小结"><a href="#面试题小结" class="headerlink" title="面试题小结"></a>面试题小结</h1><h1 id="1-内存结构"><a href="#1-内存结构" class="headerlink" title="1 内存结构"></a>1 内存结构</h1><blockquote>
 <h3 id="1、简述一下JVM的内存结构？-高频"><a href="#1、简述一下JVM的内存结构？-高频" class="headerlink" title="1、简述一下JVM的内存结构？(高频)"></a>1、简述一下JVM的内存结构？(高频)</h3></blockquote>
 <p>JVM在执行Java程序时，会把它管理的内存划分为若干个的区域，每个区域都有自己的用途和创建销毁时间。如下图所示，可以分为两大部分，线程私有</p>
 <p>区和共享区。</p>
@@ -723,4 +723,40 @@ gtag('config', 'G-NDJCWM8G60');
 
   }
 }
-window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="60198" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script src="https://npm.elemecdn.com/aplayer/dist/APlayer.min.js"></script>
+<div id="hexo-aplayer" class="aplayer no-destroy"></div>
+
+<script>
+
+  document.addEventListener("DOMContentLoaded", function() {
+
+    const ap = new APlayer({
+
+      container: document.getElementById('hexo-aplayer'),
+
+      fixed: true,
+
+      autoplay: true,
+
+      audio: [
+
+        {
+
+          name: '清风徐来',
+
+          artist: '王菲',
+
+          url: 'https://music.163.com/song/media/outer/url?id=34341360.mp3',
+
+          cover: '/images/1.jpg'
+
+        }
+
+      ]
+
+    });
+
+  });
+
+</script>
+<script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
